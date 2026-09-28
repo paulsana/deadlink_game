@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    color: white;
+    font-family: Georgia, serif;
+    overflow: hidden;
+}
+
+.scene {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    opacity: 0.25;
+}
+
+.next-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 10;
+}
+
+.cinema-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.line {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    text-align: center;
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.line.active {
+    opacity: 1;
+}
+
+.line.fade-out {
+    opacity: 0;
+}
+
+.final {
+    color: #ff4d4d;
+}

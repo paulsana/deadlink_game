@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Scene A - Introduction</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scene" onclick="nextLine()">
+
+    <!-- button -->
+    <div class="next-btn">click &gt;&gt;</div>
+
+    <!-- bg will insert later meowmeow-->
+    <div class="background">
+        <strong>PLACEHOLDER</strong>
+    </div>
+
+    <!-- txt -->
+    <div class="cinema-text">
+
+        <div class="line active">
+            One second, Sarah's voice filled the forest stage.
+        </div>
+        <!-- SFX Singing -->
+
+        <div class="line">
+            warm
+        </div>
+
+        <div class="line">
+            bright
+        </div>
+
+        <div class="line">
+            alive
+        </div>
+
+        <div class="line">
+            Hollow Woods collapsed into darkness.
+        </div>
+
+        <div class="line">
+            No lights.
+        </div>
+
+        <div class="line">
+            No music.
+        </div>
+
+        <div class="line">
+            No screams at first.
+        </div>
+        <!-- SFX gunshot -->
+
+        <div class="line final">
+            Sarah was on the stage floor —
+            blood dark against the wood,
+            eyes open,
+            voice gone forever.
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+let current = 0;
+const lines = document.querySelectorAll(".line");
+
+function nextLine() {
+    if (current < lines.length - 1) {
+        lines[current].classList.remove("active");
+        lines[current].classList.add("fade-out");
+
+        current++;
+
+        lines[current].classList.add("active");
+    }
+}
+</script>
+
+</body>
+</html>
